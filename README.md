@@ -8,4 +8,4 @@ Also read [my blog](http://tomstechnicalblog.blogspot.com/2016/10/kotlin-for-dat
 
 ## Running
 
-`gradle runExample`
+`gradle runExamples`

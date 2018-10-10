@@ -25,7 +25,7 @@ dependencies {
     compile 'de.javakaffee:kryo-serializers:0.42'
 }
 
-task runExample(type: JavaExec) {
+task runExamples(type: JavaExec) {
     main = 'com.futureadvisor.algoio.kotlin.example.Example'
     classpath = sourceSets.main.runtimeClasspath
 }
