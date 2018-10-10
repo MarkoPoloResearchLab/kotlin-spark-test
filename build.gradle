@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlin_version = '1.1.1'
+    ext.kotlin_version = '1.2.71'
     repositories {
         mavenCentral()
     }
@@ -18,9 +18,14 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
     //Apache Spark
-    compile 'org.apache.spark:spark-core_2.10:1.6.1'
+    compile 'org.apache.spark:spark-core_2.11:2.3.2'
 
     //using Kryo for serialization (optional)
-    compile 'com.esotericsoftware:kryo:4.0.0'
-    compile 'de.javakaffee:kryo-serializers:0.38'
+    compile 'com.esotericsoftware:kryo:4.0.2'
+    compile 'de.javakaffee:kryo-serializers:0.42'
+}
+
+task runExample(type: JavaExec) {
+    main = 'com.futureadvisor.algoio.kotlin.example.Example'
+    classpath = sourceSets.main.runtimeClasspath
 }
